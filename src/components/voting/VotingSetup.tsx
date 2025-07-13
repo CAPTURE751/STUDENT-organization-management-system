@@ -212,7 +212,7 @@ const VotingSetup: React.FC<VotingSetupProps> = ({ onBack }) => {
           <Checkbox 
             id="autoClose"
             checked={electionData.autoClose}
-            onCheckedChange={(checked) => setElectionData(prev => ({ ...prev, autoClose: checked }))}
+            onCheckedChange={(checked) => setElectionData(prev => ({ ...prev, autoClose: checked === true }))}
           />
           <Label htmlFor="autoClose">Auto-close election after end time</Label>
         </div>
