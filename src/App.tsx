@@ -11,6 +11,7 @@ import Events from "./pages/Events";
 import Voting from "./pages/Voting";
 import Documents from "./pages/Documents";
 import Finance from "./pages/Finance";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="voting" element={<Voting />} />
             <Route path="documents" element={<Documents />} />
             <Route path="finance" element={<Finance />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
