@@ -27,7 +27,6 @@ export type Database = {
           registration_deadline: string | null
           registration_fee: number | null
           start_date: string
-          status: Database["public"]["Enums"]["event_status"]
           title: string
           updated_at: string
         }
@@ -43,7 +42,6 @@ export type Database = {
           registration_deadline?: string | null
           registration_fee?: number | null
           start_date: string
-          status?: Database["public"]["Enums"]["event_status"]
           title: string
           updated_at?: string
         }
@@ -59,7 +57,6 @@ export type Database = {
           registration_deadline?: string | null
           registration_fee?: number | null
           start_date?: string
-          status?: Database["public"]["Enums"]["event_status"]
           title?: string
           updated_at?: string
         }
@@ -82,7 +79,6 @@ export type Database = {
           membership_fee: number | null
           notes: string | null
           organization_id: string
-          status: Database["public"]["Enums"]["membership_status"]
           updated_at: string
           user_id: string
         }
@@ -94,7 +90,6 @@ export type Database = {
           membership_fee?: number | null
           notes?: string | null
           organization_id: string
-          status?: Database["public"]["Enums"]["membership_status"]
           updated_at?: string
           user_id: string
         }
@@ -106,7 +101,6 @@ export type Database = {
           membership_fee?: number | null
           notes?: string | null
           organization_id?: string
-          status?: Database["public"]["Enums"]["membership_status"]
           updated_at?: string
           user_id?: string
         }
@@ -133,7 +127,6 @@ export type Database = {
           logo_url: string | null
           motto: string | null
           name: string
-          organization_type: Database["public"]["Enums"]["organization_type"]
           updated_at: string
           website_url: string | null
         }
@@ -149,7 +142,6 @@ export type Database = {
           logo_url?: string | null
           motto?: string | null
           name: string
-          organization_type: Database["public"]["Enums"]["organization_type"]
           updated_at?: string
           website_url?: string | null
         }
@@ -165,7 +157,6 @@ export type Database = {
           logo_url?: string | null
           motto?: string | null
           name?: string
-          organization_type?: Database["public"]["Enums"]["organization_type"]
           updated_at?: string
           website_url?: string | null
         }
@@ -182,7 +173,6 @@ export type Database = {
           membership_id: string | null
           organization_id: string | null
           payment_method: string | null
-          status: Database["public"]["Enums"]["payment_status"]
           transaction_id: string | null
           updated_at: string
           user_id: string
@@ -197,7 +187,6 @@ export type Database = {
           membership_id?: string | null
           organization_id?: string | null
           payment_method?: string | null
-          status?: Database["public"]["Enums"]["payment_status"]
           transaction_id?: string | null
           updated_at?: string
           user_id: string
@@ -212,7 +201,6 @@ export type Database = {
           membership_id?: string | null
           organization_id?: string | null
           payment_method?: string | null
-          status?: Database["public"]["Enums"]["payment_status"]
           transaction_id?: string | null
           updated_at?: string
           user_id?: string
@@ -294,7 +282,6 @@ export type Database = {
           created_at: string
           id: string
           organization_id: string | null
-          role: Database["public"]["Enums"]["user_role"]
           updated_at: string
           user_id: string
         }
@@ -302,7 +289,6 @@ export type Database = {
           created_at?: string
           id?: string
           organization_id?: string | null
-          role?: Database["public"]["Enums"]["user_role"]
           updated_at?: string
           user_id: string
         }
@@ -310,7 +296,6 @@ export type Database = {
           created_at?: string
           id?: string
           organization_id?: string | null
-          role?: Database["public"]["Enums"]["user_role"]
           updated_at?: string
           user_id?: string
         }
@@ -321,14 +306,6 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      has_role: {
-        Args: {
-          _organization_id?: string
-          _role: Database["public"]["Enums"]["user_role"]
-          _user_id: string
-        }
-        Returns: boolean
-      }
       is_org_admin: {
         Args: { _organization_id: string; _user_id: string }
         Returns: boolean
